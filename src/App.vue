@@ -2,9 +2,9 @@
   <div id="app" class="app appW">
     <header>
       <div class="row other">
-        <img class="main-icon-logo" src="./assets/logo.png">
-        <img class="main-icon-dropDown" src="./assets/logo.png" @click="clickMenuButton">
-
+        <img class="main-icon-logo" src="./images/logo_yuntu.png">
+        <img class="main-icon-dropDown" src="./images/icon_drop_down.png" @click="clickMenuButton">
+        <img class="main-icon-text" src="./images/text.png">
         <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':isShow}" >
           <tbody>
           <tr v-for="item in menu" :key="item.title">
@@ -12,11 +12,8 @@
           </tr>
           </tbody>
         </table>
-
       </div>
     </header>
-
-    <img src="./assets/logo.png" >
     <router-view/>
   </div>
 </template>
@@ -94,6 +91,12 @@ export default {
   width: 21px;
   height: 18px;
 }
+.main-icon-text{
+  position: absolute;
+  right: 16px;
+  width: 83px;
+  height: 42px;
+}
   span{
     font-weight: 500;
     margin-left: 12px;
@@ -102,7 +105,7 @@ export default {
     font-family: PingFangSC-Medium;
   }
   header{
-    margin-left: 12px;
+    margin: 9px 0 9px 12px;
   }
   .dropDown-list{
     position: absolute;
@@ -136,5 +139,12 @@ export default {
 }
 .dropDown-list tr:last-child td{
   border: 0;
+}
+
+.main-icon-dropDown{
+  display: none;
+}
+.main-icon-text{
+  display: block;
 }
 </style>
