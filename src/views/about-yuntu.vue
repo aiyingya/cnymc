@@ -1,4 +1,3 @@
-<!--关于运图-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
