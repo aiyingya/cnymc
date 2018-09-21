@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Main from '@/views/main'
 import AboutYuntu from '@/views/about-yuntu'
 import BrandDetail from '@/views/brand-detail'

@@ -36,15 +36,16 @@ export default {
   },
   mounted () {
     setTimeout(function () {
-      var swiper = new Swiper('.swiper-container', {
+      /* eslint-disable no-new */
+      new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         autoplay: 3000,
         loop: true,
         autoHeight: true
-//        onTouchEnd: function () {
-//          swiper.startAutoplay()
-//        }
+        /*  onTouchEnd: function () {
+          swiper.startAutoplay()
+        } */
       })
     }, 1000)
   }
@@ -102,7 +103,6 @@ export default {
     height: 42px;
     width: 42px;
   }
-
 
 h1, h2 {
   font-weight: normal;
