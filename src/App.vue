@@ -24,7 +24,8 @@ export default {
   data: function () {
     return {
       menu: [{title: '运图首页', target: '/aboutYuntu'},
-        {title: '关于云图', target: '/'},
+        {title: '关于运图', target: '/'},
+        {title: '品牌介绍', target: '/'},
         {title: '运图动态', target: '/'},
         {title: '门店列表', target: '/'}],
       isShow: false
