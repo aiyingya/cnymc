@@ -32,13 +32,12 @@ export default {
       var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        autoplay: true,
-        delay: 3000,
+        autoplay: 3000,
         loop: true,
-        autoHeight: true,
-        onTouchEnd: function () {
-          swiper.startAutoplay()
-        }
+        autoHeight: true
+//        onTouchEnd: function () {
+//          swiper.startAutoplay()
+//        }
       })
     }, 1000)
   }
