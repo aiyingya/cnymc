@@ -105,7 +105,7 @@ export default {
     color: #333333;
     font-family: PingFangSC-Medium;
   }
-  header{
+body header{
     margin: 9px 0 9px 12px;
   }
   .dropDown-list{
