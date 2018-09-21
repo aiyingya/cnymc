@@ -30,10 +30,8 @@ export default {
   mounted () {
     setTimeout(function () {
       var swiper = new Swiper('.swiper-container', {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
         autoplay: true,
         delay: 3000,
         loop: true,
