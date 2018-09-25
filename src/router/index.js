@@ -4,6 +4,7 @@ import Main from '@/views/main'
 import AboutYuntu from '@/views/about-yuntu'
 import BrandDetail from '@/views/brand-detail'
 import Dynamic from '@/views/dynamic'
+import DynamicDetail from '@/views/dynamic-detial'
 import StoreList from '@/views/store-list'
 
 Vue.use(Router)
@@ -38,6 +39,14 @@ let router = new Router({
       path: '/Dynamic',
       name: 'Dynamic',
       component: Dynamic,
+      meta: {
+        description: '运图要买车'
+      }
+    },
+    {
+      path: '/DynamicDetail',
+      name: 'DynamicDetail',
+      component: DynamicDetail,
       meta: {
         description: '运图要买车'
       }
