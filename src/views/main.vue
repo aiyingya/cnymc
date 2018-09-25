@@ -30,14 +30,14 @@
       <h3>品牌介绍</h3>
       <span>BRAND INTRODUCTION</span>
     </div>
-    <div class="main_brands clearfix">
-      <img src="../images/main/brand_01.png">
-      <img src="../images/main/brand_02.png">
-      <img src="../images/main/brand_03.png">
-      <img src="../images/main/brand_04.png">
-      <img src="../images/main/brand_05.png">
-      <img src="../images/main/brand_06.png">
-    </div>
+    <ul class="main_brands clearfix">
+      <li><img @click="clickDetial(1)" src="../images/main/brand_01.png"></li>
+      <li><img @click="clickDetial(2)" src="../images/main/brand_02.png"></li>
+      <li><img @click="clickDetial(3)" src="../images/main/brand_03.png"></li>
+      <li><img @click="clickDetial(4)" src="../images/main/brand_04.png"></li>
+      <li><img @click="clickDetial(5)" src="../images/main/brand_05.png"></li>
+      <li><img @click="clickDetial(6)" src="../images/main/brand_06.png"></li>
+    </ul>
     <div class="main_bottom" v-html="bottomText">
     </div>
   </div>
@@ -70,6 +70,11 @@ export default {
         } */
       })
     }, 1000)
+  },
+  methods: {
+    clickDetial: function (index) {
+      this.$router.push({name: 'BrandDetail', query: { index: index }})
+    }
   }
 }
 </script>
@@ -183,13 +188,18 @@ export default {
     padding: 0 15px 11px;
     background-color: #F2F2F2;
   }
-  .main_brands img{
+  .main_brands li{
+    margin: 0;
     float: left;
     width: 47%;
     height:109px;
     margin-bottom: 9px;
   }
-  .main_brands img:nth-child(2n){
+  .main_brands img{
+    width: 100%;
+    height: 100%;
+  }
+  .main_brands li:nth-child(2n){
     float: right;
   }
   .main_bottom{

@@ -46,6 +46,19 @@ export default {
       var _this = this
       _this.tabIndex = index
     }
+  },
+  created: function () {
+    const _this = this
+    const _index = _this.$route.query.index
+    if (_index) {
+      try {
+        _this.tabIndex = Number(_index)
+      } catch (e) {
+        _this.tabIndex = 1
+      }
+      return
+    }
+    _this.tabIndex = 1
   }
 }
 </script>
