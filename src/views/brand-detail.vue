@@ -1,95 +1,50 @@
 <!--品牌详情-->
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+  <div class="brand-detail">
+    <img src="../images/dynamic/01/01.png">
     <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
+      <li @click="tabClick(1)" :class="{'active':tabIndex==1}">植根县域</li>
+      <li @click="tabClick(2)" :class="{'active':tabIndex==2}">车多价好</li>
+      <li @click="tabClick(3)" :class="{'active':tabIndex==3}">一站服务</li>
+      <li @click="tabClick(4)" :class="{'active':tabIndex==4}">打造体系</li>
+      <li @click="tabClick(5)" :class="{'active':tabIndex==5}">资源共享</li>
+      <li @click="tabClick(6)" :class="{'active':tabIndex==6}">开放社区</li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <brand01 v-show="tabIndex==1"></brand01>
+    <brand02 v-show="tabIndex==2"></brand02>
+    <brand03 v-show="tabIndex==3"></brand03>
+    <brand04 v-show="tabIndex==4"></brand04>
+    <brand05 v-show="tabIndex==5"></brand05>
+    <brand06 v-show="tabIndex==6"></brand06>
   </div>
 </template>
 
 <script>
+import brand01 from '@/components/brand/01.vue'
+import brand02 from '@/components/brand/02.vue'
+import brand03 from '@/components/brand/03.vue'
+import brand04 from '@/components/brand/04.vue'
+import brand05 from '@/components/brand/05.vue'
+import brand06 from '@/components/brand/06.vue'
 export default {
-  name: 'HelloWorld',
+  name: 'BrandDetail',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      tabIndex: 1
+    }
+  },
+  components: {
+    brand01: brand01,
+    brand02: brand02,
+    brand03: brand03,
+    brand04: brand04,
+    brand05: brand05,
+    brand06: brand06
+  },
+  methods: {
+    tabClick: function (index) {
+      var _this = this
+      _this.tabIndex = index
     }
   }
 }
@@ -97,18 +52,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .brand-detail{
+    margin-bottom: 50px;
+  }
+  .brand-detail img{
+    width: 100%;
+  }
+  .brand-detail ul{
+    display: -webkit-box;
+    padding: 12px 17px;
+    border-bottom: 0.5px solid #F2F2F2;
+  }
+  .brand-detail ul li{
+    position: relative;
+    -webkit-box-flex: 1;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .brand-detail ul li.active{
+    position: relative;
+    -webkit-box-flex: 1;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .brand-detail ul li.active:before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 30%;
+    width: 40%;
+    border-bottom: 2px solid #DD0707;
+  }
+
 </style>

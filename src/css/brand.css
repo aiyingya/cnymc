@@ -1,0 +1,19 @@
+.brand-contain{
+  margin: 0 17px;
+}
+.brand-contain h4{
+  margin-top: 24px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #4C4B4B;
+  text-align: left;
+}
+.brand-contain p{
+  margin-top: 15px;
+  text-indent: 2em;
+  text-align: left;
+}
+.brand-contain img{
+  margin-top: 15px;
+  width: 100%;
+}
