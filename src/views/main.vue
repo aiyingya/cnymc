@@ -13,10 +13,10 @@
     </template>
     <div class="main_icons">
         <ul>
-          <li><div><img src="../images/main/icon_about_yuntu.png"></div><div>关于运图</div></li>
-          <li><div><img src="../images/main/icon_brand_introduce.png"></div><div>关于运图</div></li>
-          <li><div><img src="../images/main/icon_dynamic.png"></div><div>关于运图</div></li>
-          <li><div><img src="../images/main/icon_store_list.png"></div><div>关于运图</div></li>
+          <router-link :to="{ name: 'AboutYuntu'}" tag="li"><div><img src="../images/main/icon_about_yuntu.png"></div><div>关于运图</div></router-link>
+          <router-link :to="{ name: 'BrandDetail'}" tag="li"><div><img src="../images/main/icon_brand_introduce.png"></div><div>品牌介绍</div></router-link>
+          <router-link :to="{ name: 'Dynamic'}" tag="li"><div><img src="../images/main/icon_dynamic.png"></div><div>运图动态</div></router-link>
+          <router-link :to="{ name: 'StoreList'}" tag="li"><div><img src="../images/main/icon_store_list.png"></div><div>门店列表</div></router-link>
         </ul>
     </div>
     <div class="main_dynamic">
