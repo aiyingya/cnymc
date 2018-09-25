@@ -106,7 +106,7 @@ export default {
   }
   .main_icons li{
     display: -webkit-box;
-     -webkit-box-flex: 1;
+    -webkit-box-flex: 1;
     -webkit-box-align: center;
     -webkit-box-pack: center;
     -webkit-box-orient: vertical;
