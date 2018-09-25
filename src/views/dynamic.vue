@@ -1,114 +1,77 @@
 <!--运图动态-->
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div class="dynamic">
+      <img src="../images/dynamic/01/01.png">
+      <div class="dynamic_item">
+        <div class="dynamic_detial">
+          <h4>新店开业成交23台，遂川店开 业庆典&吉安区团购大联动</h4>
+          <div>2018-09-8 11:14:53</div>
+        </div>
+        <img src="../images/dynamic/01/01.png">
+      </div>
+      <div class="dynamic_item">
+        <div class="dynamic_detial">
+          <h4>新店开业成交23台，遂川店开 业庆典&吉安区团购大联动</h4>
+          <div>2018-09-8 11:14:53</div>
+        </div>
+        <img src="../images/dynamic/01/01.png">
+      </div>
+
   </div>
 </template>
 
 <script>
+import dynamic01 from '@/components/dynamic/01.vue'
+import dynamic02 from '@/components/dynamic/02.vue'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    dynamic01: dynamic01,
+    dynamic02: dynamic02
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .dynamic{
+    border-top:0.5px solid #DDDDDD;
+  }
+  .dynamic img{
+    width: 100%;
+  }
+  .dynamic_item{
+    display: -webkit-box;
+    -webkit-box-align: center;
+    padding: 15px;
+    border-bottom: 0.5px solid #E8E8E8;
+  }
+  .dynamic_item .dynamic_detial{
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-align: left;
+  }
+  .dynamic_item .dynamic_detial h4{
+    font-size: 15px;
+    line-height: 21px;
+    color: #4C4B4B;
+  }
+  .dynamic_item .dynamic_detial div{
+    font-size: 12px;
+    line-height: 17px;
+    color: #BDBDBD;
+  }
+
+  .dynamic_item img{
+    -webkit-box-flex: 1;
+    padding-left: 38px;
+    width: 109px;
+    height: 72px;
+  }
 </style>
