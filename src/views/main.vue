@@ -1,6 +1,6 @@
 <!--首页-->
 <template>
-  <div class="hello">
+  <div class="main">
     <template>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -76,7 +76,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
   .swiper-container {
     width: 100%;
     min-height: 100px;
