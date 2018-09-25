@@ -1,12 +1,12 @@
 <!--运图动态-->
 <template>
   <div class="dynamic_detial">
-    <dynamic01 v-if="temIndex==1"></dynamic01>
-    <dynamic02 v-if="temIndex==2"></dynamic02>
-    <dynamic03 v-if="temIndex==3"></dynamic03>
-    <dynamic04 v-if="temIndex==4"></dynamic04>
-    <dynamic05 v-if="temIndex==5"></dynamic05>
-    <dynamic06 v-if="temIndex==6"></dynamic06>
+    <dynamic01 v-if="dyIndex==1"></dynamic01>
+    <dynamic02 v-if="dyIndex==2"></dynamic02>
+    <dynamic03 v-if="dyIndex==3"></dynamic03>
+    <dynamic04 v-if="dyIndex==4"></dynamic04>
+    <dynamic05 v-if="dyIndex==5"></dynamic05>
+    <dynamic06 v-if="dyIndex==6"></dynamic06>
   </div>
 </template>
 
@@ -21,17 +21,21 @@ export default {
   },
   data () {
     return {
-      temIndex: 1
+      dyIndex: 1
     }
   },
   created: function () {
     const _this = this
     const _index = _this.$route.query.index
     if (_index) {
-      _this.temIndex = Number(_index)
+      try {
+        _this.dyIndex = Number(_index)
+      } catch (e) {
+        _this.dyIndex = 1
+      }
       return
     }
-    _this.temIndex = 1
+    _this.dyIndex = 1
   }
 }
 </script>
