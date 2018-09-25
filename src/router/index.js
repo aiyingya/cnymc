@@ -8,32 +8,55 @@ import StoreList from '@/views/store-list'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   routes: [
     {
       path: '/',
       name: 'Main',
-      component: Main
+      component: Main,
+      meta: {
+        description: '运图要买车'
+      }
     },
     {
       path: '/AboutYuntu',
       name: 'AboutYuntu',
-      component: AboutYuntu
+      component: AboutYuntu,
+      meta: {
+        description: '运图要买车'
+      }
     },
     {
       path: '/BrandDetail',
       name: 'BrandDetail',
-      component: BrandDetail
+      component: BrandDetail,
+      meta: {
+        description: '运图要买车'
+      }
     },
     {
       path: '/Dynamic',
       name: 'Dynamic',
-      component: Dynamic
+      component: Dynamic,
+      meta: {
+        description: '运图要买车'
+      }
     },
     {
       path: '/StoreList',
       name: 'StoreList',
-      component: StoreList
+      component: StoreList,
+      meta: {
+        description: '运图要买车'
+      }
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  /* must call `next` */
+  document.title = '运图要买车' // set dynamic title => to.meta['description']
+  next()
+})
+
+export default router
