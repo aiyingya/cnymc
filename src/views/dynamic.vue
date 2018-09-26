@@ -38,6 +38,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+  #app .main-icon-dropDown{
+    display: block;
+  }
+  #app .main-icon-text{
+    display: none;
+  }
+</style>
 <style scoped>
   .dynamic{
     border-top:0.5px solid #DDDDDD;

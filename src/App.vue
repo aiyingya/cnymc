@@ -5,15 +5,15 @@
         <img class="main-icon-logo" src="./images/logo_yuntu.png">
         <img class="main-icon-dropDown" src="./images/icon_drop_down.png" @click="clickMenuButton">
         <img class="main-icon-text" src="./images/text.png">
-        <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':isShow}" >
-          <tbody>
-          <tr v-for="item in menu" :key="item.title">
-            <td>{{item.title}}</td>
-          </tr>
-          </tbody>
-        </table>
       </div>
     </header>
+    <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':isShow}" >
+      <tbody>
+      <tr v-for="item in menu" :key="item.title">
+        <td @click="goMenu(item.target)">{{item.title}}</td>
+      </tr>
+      </tbody>
+    </table>
     <router-view/>
   </div>
 </template>
@@ -23,17 +23,20 @@ export default {
   name: 'App',
   data: function () {
     return {
-      menu: [{title: '运图首页', target: '/aboutYuntu'},
-        {title: '关于运图', target: '/'},
-        {title: '品牌介绍', target: '/'},
-        {title: '运图动态', target: '/'},
-        {title: '门店列表', target: '/'}],
+      menu: [{title: '运图首页', target: '/'},
+        {title: '关于运图', target: 'AboutYuntu'},
+        {title: '品牌介绍', target: 'BrandDetail'},
+        {title: '运图动态', target: 'Dynamic'},
+        {title: '门店列表', target: 'StoreList'}],
       isShow: false
     }
   },
   methods: {
     clickMenuButton: function () {
       this.isShow = !this.isShow
+    },
+    goMenu: function (target) {
+    	this.$router.push(target)
     }
   }
 
@@ -42,6 +45,7 @@ export default {
 
 <style>
 #app {
+  position: relative;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,19 +67,11 @@ export default {
   float: left;
 }
 .row{
-  position: relative;
   width: 100%;
   margin-right: 20px;
   display: flex;
   justify-content: left;
   align-items: center;
-}
-.main-icon-refurbish{
-  position: absolute;
-  right: 20px;
-  width: 16px;
-  height: 16px;
-  float: right;
 }
 .main-icon-logo{
   width: 112px;
@@ -110,7 +106,8 @@ body header{
   }
   .dropDown-list{
     position: absolute;
-    top:60px;
+    top:62px;
+    z-index: 100;
     padding: 0 13px;
     right: -10px;/*from padding , init is 16px*/
     width: 112px;
@@ -127,7 +124,7 @@ body header{
   }
 .dropDown-show{
   overflow:auto;
-  height: 100px;
+  height: 110px;
   opacity:1;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
