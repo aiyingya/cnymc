@@ -38,8 +38,9 @@
       <li><img @click="clickDetial(5)" src="../images/main/brand_05.png"></li>
       <li><img @click="clickDetial(6)" src="../images/main/brand_06.png"></li>
     </ul>
-    <div class="main_bottom" v-html="bottomText">
-    </div>
+    <!--<div   @click="see">-->
+      <a class="main_bottom" v-html="bottomText" target="_blank" :href="goHref"></a>
+    <!--</div>-->
   </div>
 </template>
 
@@ -53,7 +54,8 @@ export default {
       bottomText: '版权所有 &#169 2018 运图要买车 沪 ICP 备 15014796号 -1',
       msg: 'Welcome to Your Vue.js App',
       listImg: [require('../images/brand/01.png'),
-        require('../images/brand/02.png')]
+        require('../images/brand/02.png')],
+      goHref: 'http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=srTySAc-4ad9_oMti7yz8dWb1qDHL93aU60-Mpw1Blu-MeuHhf_B!176422066'
     }
   },
   mounted () {
@@ -203,6 +205,7 @@ export default {
     float: right;
   }
   .main_bottom{
+    display: block;
     padding-top: 5px;
     padding-bottom: 12px;
     height: 13px;
