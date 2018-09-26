@@ -52,8 +52,8 @@ export default {
     return {
       bottomText: '版权所有 &#169 2018 运图要买车 沪 ICP 备 15014796号 -1',
       msg: 'Welcome to Your Vue.js App',
-      listImg: [require('../images/brand_detail/01.png'),
-        require('../images/brand_detail/02.png')]
+      listImg: [require('../images/brand/01.png'),
+        require('../images/brand/02.png')]
     }
   },
   mounted () {
