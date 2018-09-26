@@ -38,9 +38,7 @@
       <li><img @click="clickDetial(5)" src="../images/main/brand_05.png"></li>
       <li><img @click="clickDetial(6)" src="../images/main/brand_06.png"></li>
     </ul>
-    <!--<div   @click="see">-->
-      <a class="main_bottom" v-html="bottomText" target="_blank" :href="goHref"></a>
-    <!--</div>-->
+    <a class="main_bottom" v-html="bottomText" target="_blank" :href="goHref"></a>
   </div>
 </template>
 
