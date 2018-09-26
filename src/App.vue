@@ -36,7 +36,7 @@ export default {
       this.isShow = !this.isShow
     },
     goMenu: function (target) {
-    	this.$router.push(target)
+      this.$router.push(target)
     }
   }
 
