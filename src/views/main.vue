@@ -23,7 +23,7 @@
       <ul>
         <li><img src="../images/main/text_01.png"></li>
         <li><img src="../images/main/text_02.png"></li>
-        <li>关于运图关于运图的范德萨发热关于运图关是的范德萨于运图关于运图关于运图关于运图关于运图的范德萨发热关于运图关是的范德萨于运图关于运图关于运图</li>
+        <li>新店开业成交23台，遂川店开业庆典&吉安区团购大联动</li>
       </ul>
     </div>
     <div class="main_text">
