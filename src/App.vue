@@ -10,10 +10,11 @@
     <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':$store.state.isShowDropDown}" >
       <tbody>
       <tr v-for="item in menu" :key="item.title">
-        <td @click="goMenu(item.target)">{{item.title}}</td>
+        <td @click="goMenu(item.target)" :class="{'active':item.target == selectDropDown}"><h4>{{item.title}}</h4></td>
       </tr>
       </tbody>
     </table>
+    <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent ></div>
     <router-view/>
   </div>
 </template>
@@ -24,11 +25,11 @@ export default {
   data: function () {
     return {
       menu: [{title: '运图首页', target: '/'},
-        {title: '关于运图', target: 'AboutYuntu'},
-        {title: '品牌介绍', target: 'BrandDetail'},
-        {title: '运图动态', target: 'Dynamic'},
-        {title: '门店列表', target: 'StoreList'}],
-      isShow: false
+        {title: '关于运图', target: '/AboutYuntu'},
+        {title: '品牌介绍', target: '/BrandDetail'},
+        {title: '运图动态', target: '/Dynamic'},
+        {title: '门店列表', target: '/StoreList'}],
+      selectDropDown: ''
     }
   },
   methods: {
@@ -41,7 +42,17 @@ export default {
       }
     },
     goMenu: function (target) {
-      this.$router.push(target)
+      const _this = this
+      _this.selectDropDown = target
+      const curPath = _this.$router.app._route.path
+      setTimeout(function () {
+        if (curPath === target) {
+          _this.$store.commit('hideDropDown')
+        } else {
+          _this.$router.push(target)
+        }
+        _this.selectDropDown = ''
+      }, 200)
     }
   }
 }
@@ -88,6 +99,7 @@ export default {
 }
 .main-icon-dropDown{
   position: absolute;
+  z-index: 100;
   right: 16px;
   width: 21px;
   height: 18px;
@@ -113,8 +125,7 @@ body header{
     top:62px;
     z-index: 100;
     padding: 0 13px;
-    right: -10px;/*from padding , init is 16px*/
-    width: 112px;
+    right: 10px;/*from padding , init is 16px*/
     background-color: #FFFFFF;
     border-radius: 6px;
     /*border:1px solid red;*/
@@ -126,18 +137,33 @@ body header{
   }
 .dropDown-show{
   overflow:auto;
-  height: 110px;
+  height: 224px;
   opacity:1;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 .dropDown-list td{
+  padding:12px 15px;
   color: #6E6E6E;
   font-size: 14px;
+  line-height: 20px;
   font-family: PingFangSC;
   border-bottom: 0.5px solid #CFCFCF;
 }
+
 .dropDown-list tr:last-child td{
   border: 0;
 }
+
+.overlayer{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:10;
+}
+.dropDown-list td.active{
+    color: #DD0707;
+  }
 </style>
