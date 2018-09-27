@@ -189,7 +189,7 @@ export default {
     font-size: 15px;
     line-height: 21px;
     color: #929292;
-    background-color: #DDDDDD;
+    background-color: #F2F2F2;
   }
 
   .store-list_item .info>div{
