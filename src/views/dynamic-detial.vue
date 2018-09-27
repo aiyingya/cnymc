@@ -38,6 +38,7 @@ export default {
   },
   created: function () {
     const _this = this
+    this.$store.commit('showMenu')
     const _index = _this.$route.query.index
     if (_index) {
       try {
@@ -49,19 +50,16 @@ export default {
       return
     }
     _this.dyIndex = 1
+  },
+  beforeRouteLeave: function (to, from, next) {
+    var _this = this
+    _this.$store.commit('hideDropDown')
+    next()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-  #app .main-icon-dropDown{
-    display: block;
-  }
-  #app .main-icon-text{
-    display: none;
-  }
-</style>
 <style scoped>
   .dynamic_detial{
     border-top:0.5px solid #DDDDDD;

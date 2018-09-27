@@ -28,19 +28,19 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created: function () {
+    this.$store.commit('showMenu')
+  },
+  beforeRouteLeave: function (to, from, next) {
+    var _this = this
+    _this.$store.commit('hideDropDown')
+    next()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-  #app .main-icon-dropDown{
-    display: block;
-  }
-  #app .main-icon-text{
-    display: none;
-  }
-</style>
 <style scoped>
 
   .banner{

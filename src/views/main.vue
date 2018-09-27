@@ -56,6 +56,9 @@ export default {
       goHref: 'http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=srTySAc-4ad9_oMti7yz8dWb1qDHL93aU60-Mpw1Blu-MeuHhf_B!176422066'
     }
   },
+  created: function () {
+    this.$store.commit('hideMenu')
+  },
   mounted () {
     setTimeout(function () {
       /* eslint-disable no-new */
@@ -213,18 +216,4 @@ export default {
     background-color: #F2F2F2;
   }
 
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

@@ -3,11 +3,11 @@
     <header>
       <div class="row other">
         <img class="main-icon-logo" src="./images/logo_yuntu.png">
-        <img class="main-icon-dropDown" src="./images/icon_drop_down.png" @click="clickMenuButton">
-        <img class="main-icon-text" src="./images/text.png">
+        <img v-show="$store.state.isShowMenu" class="main-icon-dropDown" src="./images/icon_drop_down.png" @click="clickMenuButton">
+        <img v-show="!$store.state.isShowMenu" class="main-icon-text" src="./images/text.png">
       </div>
     </header>
-    <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':isShow}" >
+    <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':$store.state.isShowDropDown}" >
       <tbody>
       <tr v-for="item in menu" :key="item.title">
         <td @click="goMenu(item.target)">{{item.title}}</td>
@@ -33,13 +33,17 @@ export default {
   },
   methods: {
     clickMenuButton: function () {
-      this.isShow = !this.isShow
+      const _this = this
+      if (_this.$store.state.isShowDropDown) {
+        _this.$store.commit('hideDropDown')
+      } else {
+        _this.$store.commit('showDropDown')
+      }
     },
     goMenu: function (target) {
       this.$router.push(target)
     }
   }
-
 }
 </script>
 
@@ -119,8 +123,6 @@ body header{
     overflow: hidden;
     height: 0;
     display: block;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
   }
 .dropDown-show{
   overflow:auto;
@@ -137,12 +139,5 @@ body header{
 }
 .dropDown-list tr:last-child td{
   border: 0;
-}
-
-.main-icon-dropDown{
-  display: none;
-}
-.main-icon-text{
-  display: block;
 }
 </style>
