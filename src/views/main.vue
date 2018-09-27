@@ -56,9 +56,6 @@ export default {
       goHref: 'http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=srTySAc-4ad9_oMti7yz8dWb1qDHL93aU60-Mpw1Blu-MeuHhf_B!176422066'
     }
   },
-  created: function () {
-    this.$store.commit('hideMenu')
-  },
   mounted () {
     setTimeout(function () {
       /* eslint-disable no-new */

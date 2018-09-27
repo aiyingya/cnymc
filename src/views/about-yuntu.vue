@@ -30,7 +30,6 @@ export default {
     }
   },
   created: function () {
-    this.$store.commit('showMenu')
   },
   beforeRouteLeave: function (to, from, next) {
     var _this = this

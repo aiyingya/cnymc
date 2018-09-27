@@ -52,7 +52,6 @@ export default {
   },
   created: function () {
     const _this = this
-    this.$store.commit('showMenu')
     const _index = _this.$route.query.index
     if (_index) {
       try {

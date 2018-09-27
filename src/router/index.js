@@ -65,6 +65,16 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
   /* must call `next` */
   document.title = '运图要买车' // set dynamic title => to.meta['description']
+  // router.app.$children.length
+  let store = router.app.$store
+  if (!store) {
+    store = router.app.$options.store
+  }
+  if (to.name === 'Main') {
+    router.app.$options.store.commit('hideMenu')
+  } else {
+    router.app.$options.store.commit('showMenu')
+  }
   next()
 })
 
