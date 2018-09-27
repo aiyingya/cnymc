@@ -1,7 +1,7 @@
 <template>
   <div class="dynamic_contain">
     <div class="dynamic_contain_title">新店开业成交23台，遂川店开业庆典&吉安区团购大联动</div>
-    <div class="dynamic_contain_time">2018-09-8 11:14:53</div>
+    <div class="dynamic_contain_time">2018-09-08 11:14:53</div>
     <div class="dynamic_contain_introduce">
       <p>
         热情盖过半城盛夏，酷暑难消庆典年华，遂川的汽车行业，你们被震动了吗？
