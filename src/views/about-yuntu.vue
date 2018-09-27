@@ -1,91 +1,29 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div class="about-yuntu">
+    <div class="banner">
+      <img src="../images/about-yuntu/banner.png">
+      <img class="img_title" src="../images/about-yuntu/banner_title.png">
+    </div>
+    <div class="contain">
+      <p>
+        “运图要买车”隶属于上海运图投资有限公司，是首家真正打通交易闭环的自营县域级全国连锁汽车超市，由中国电子商务成功探索者——卜广齐于2014年10月在上海成立
+      </p>
+      <p class="text_title_second mTop27">覆盖区域</p>
+      <p class="text_title_third">OVERLAY AREA</p>
+      <p>
+        “运图要买车”隶属于上海运图投资有限公司，是首家真正打通交易闭环的自营县域级全国连锁汽车超市，由中国电子商务成功探索者——卜广齐于2014年10月在上海成立
+      </p>
+      <img src="../images/about-yuntu/01.png">
+      <p class="text_title_second mTop37">运图大事记</p>
+      <p class="text_title_third">YUNTU MEMORABILIA</p>
+      <img src="../images/about-yuntu/02.png">
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'AboutYuntu',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -104,18 +42,44 @@ export default {
   }
 </style>
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
+  .about-yuntu .banner{
+    position: relative;
+  }
+  .about-yuntu .contain{
+    padding: 27px 16px 20px 18px;
+  }
+  img{
+    width: 100%;
+  }
+  .banner .img_title{
+    position: absolute;
+    right: 25px;
+    bottom: 11px;
+    width: 85px;
+    height: 138px;
+  }
+  p{
+    text-indent: 2em;
+    text-align: left;
+
+  }
+  p.text_title_second{
+    text-indent: 0;
+    text-align: left;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    color: #4C4B4B;
+  }
+  p.text_title_third{
+    text-indent: 0;
+    text-align: left;
+    font-size: 12px;
+    line-height: 17px;
+    color: #E8E8E8;
+  }
+  .mTop37{
+    margin-top: 37px;
+  }
 </style>
