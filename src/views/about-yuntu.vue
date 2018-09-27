@@ -43,14 +43,8 @@ export default {
 </style>
 <style scoped>
 
-  .about-yuntu .banner{
+  .banner{
     position: relative;
-  }
-  .about-yuntu .contain{
-    padding: 27px 16px 20px 18px;
-  }
-  img{
-    width: 100%;
   }
   .banner .img_title{
     position: absolute;
@@ -58,6 +52,12 @@ export default {
     bottom: 11px;
     width: 85px;
     height: 138px;
+  }
+  img{
+    width: 100%;
+  }
+  .contain{
+    padding: 27px 16px 20px 18px;
   }
   p{
     text-indent: 2em;
