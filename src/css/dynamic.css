@@ -1,5 +1,5 @@
 .dynamic_contain{
-  margin: 0 18px 50px;
+  margin: 0 18px 20px;
 }
 .dynamic_contain_title{
   margin-top: 15px;
@@ -43,4 +43,35 @@
 }
 .dynamic_contain .top10{
   margin-top: 10px;
+}
+p.text_center{
+  text-indent: 0;
+  text-align: center;
+}
+p.text_title_second, p.text_title_third{
+  text-indent: 0;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 48px;
+}
+p.text_title_second{
+  color: #d10412;
+}
+p.text_title_third{
+  color: #363636;
+}
+p.text_title_fourth{
+  text-indent: 0;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+.solid{
+  font-weight: 600;
+}
+.mTop10{
+  margin-top: 18px;
 }
