@@ -1,22 +1,59 @@
 <!--运图动态-->
 <template>
   <div class="dynamic">
-      <img src="../images/dynamic/01/01.png">
-      <div class="dynamic_item">
-        <div class="dynamic_detial">
-          <h4>新店开业成交23台，遂川店开 业庆典&吉安区团购大联动</h4>
-          <div>2018-09-8 11:14:53</div>
-        </div>
-        <img src="../images/dynamic/01/01.png">
+    <div class="banner">
+      <img src="../images/dynamic/banner.png">
+      <img class="img_title" src="../images/dynamic/banner_title.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>新店开业成交23台，遂川店开业庆典&吉安区团购大联动</h4>
+        <div>2018-09-08 11:14:53</div>
       </div>
-      <div class="dynamic_item">
-        <div class="dynamic_detial">
-          <h4>新店开业成交23台，遂川店开 业庆典&吉安区团购大联动</h4>
-          <div>2018-09-8 11:14:53</div>
-        </div>
-        <img src="../images/dynamic/01/01.png">
+      <img src="../images/dynamic/01.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>盛夏购车季，运图要买车信丰店团购活动圆满结束！</h4>
+        <div>2018-09-03 11:23:02</div>
       </div>
-
+      <img src="../images/dynamic/01.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>前方高能，运图要买车要搞大事情啦</h4>
+        <div>2018-09-03 11:23:02</div>
+      </div>
+      <img src="../images/dynamic/03.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>服务无止境，运图要买车“客户满意月”活动圆满结束</h4>
+        <div>2018-06-18 11:08:02</div>
+      </div>
+      <img src="../images/dynamic/04.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>全囯连锁汽车超市，运图要买车强势登陆安福</h4>
+        <div>2018-04-01 10:05:08</div>
+      </div>
+      <img src="../images/dynamic/05.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>热情如火！运图要买车开春团车会圆满结束</h4>
+        <div>2018-03-26 11:08:02</div>
+      </div>
+      <img src="../images/dynamic/06.png">
+    </div>
+    <div class="dynamic_item">
+      <div class="dynamic_detial">
+        <h4>运图要买车全程助力，大余山地马拉松圆满落幕</h4>
+        <div>2018-04-23 11:08:02</div>
+      </div>
+      <img src="../images/dynamic/07.png">
+    </div>
   </div>
 </template>
 
@@ -47,10 +84,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
   .dynamic{
     border-top:0.5px solid #DDDDDD;
   }
-  .dynamic img{
+  .banner{
+    position: relative;
+  }
+  .banner .img_title{
+    position: absolute;
+    right: 25px;
+    bottom: 11px;
+    width: 85px;
+    height: 138px;
+  }
+  img{
     width: 100%;
   }
   .dynamic_item{
