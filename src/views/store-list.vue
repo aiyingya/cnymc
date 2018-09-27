@@ -1,7 +1,10 @@
 <!--门店列表-->
 <template>
   <div class="store-list">
-    <img src="../images/dynamic/01/01.png">
+    <div class="banner">
+      <img src="../images/store-list/banner.png">
+      <img class="img_title" src="../images/store-list/banner_title.png">
+    </div>
     <h4 class="text">运图要买车-全国服务热线：400-928-9099</h4>
     <div class="store-list_item" v-for="store in storeList" :key="store.city">
       <div class="city">{{store.city}}</div>
@@ -11,7 +14,7 @@
           <div class="text2">{{info.address}}</div>
           <div class="text3">{{info.phone}}</div>
         </div>
-        <a :href="'tel:'+info.phone"><img src="../images/dynamic/01/01.png"></a>
+        <a class="a_img" :href="'tel:'+info.phone"><img src="../images/store-list/phone.png"></a>
       </div>
     </div>
 
@@ -70,7 +73,7 @@ export default {
         }, {
           name: '赣县旗舰店',
           address: '赣州市赣县区梅林大街139号',
-          phone: '赣州市赣县区梅林大街139号'
+          phone: '400-928-9099'
         }]
       }, {
         city: '吉安',
@@ -133,10 +136,20 @@ export default {
   }
 </style>
 <style scoped>
-  .store-list img{
+  .banner{
+    position: relative;
+  }
+  .banner .img_title{
+    position: absolute;
+    right: 25px;
+    bottom: 11px;
+    width: 85px;
+    height: 138px;
+  }
+  img{
     width: 100%;
   }
-  .store-list .text{
+  .text{
     display: block;
     padding:8px 0;
     text-align: center;
@@ -149,6 +162,7 @@ export default {
   }
   .store-list_item .info{
     display: -webkit-box;
+    -webkit-box-align: center;
     padding: 10px 15px;
     border-bottom: 0.5px solid #E8E8E8;
   }
@@ -162,10 +176,13 @@ export default {
     line-height: 17px;
     color: #8C8C8C;
   }
+  .store-list_item  .a_img{
+    padding: 5px;
+  }
   .store-list_item img{
     -webkit-box-flex: 1;
-    width: 50px;
-    height: 50px;
+    width: 26px;
+    height: 26px;
   }
   .store-list_item .city{
     padding: 9px 0 9px 15px;
