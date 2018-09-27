@@ -70,13 +70,6 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
-  created: function () {
-  },
-  beforeRouteLeave: function (to, from, next) {
-    var _this = this
-    _this.$store.commit('hideDropDown')
-    next()
   }
 }
 </script>

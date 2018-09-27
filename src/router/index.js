@@ -71,9 +71,12 @@ router.beforeEach((to, from, next) => {
     store = router.app.$options.store
   }
   if (to.name === 'Main') {
-    router.app.$options.store.commit('hideMenu')
+    store.commit('hideMenu')
   } else {
-    router.app.$options.store.commit('showMenu')
+    store.commit('showMenu')
+  }
+  if (store.state.isShowDropDown) {
+    store.commit('hideDropDown')
   }
   next()
 })

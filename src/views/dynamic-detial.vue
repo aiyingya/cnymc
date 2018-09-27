@@ -49,11 +49,6 @@ export default {
       return
     }
     _this.dyIndex = 1
-  },
-  beforeRouteLeave: function (to, from, next) {
-    var _this = this
-    _this.$store.commit('hideDropDown')
-    next()
   }
 }
 </script>

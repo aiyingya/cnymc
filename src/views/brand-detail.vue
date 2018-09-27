@@ -62,11 +62,6 @@ export default {
       return
     }
     _this.tabIndex = 1
-  },
-  beforeRouteLeave: function (to, from, next) {
-    var _this = this
-    _this.$store.commit('hideDropDown')
-    next()
   }
 }
 </script>
