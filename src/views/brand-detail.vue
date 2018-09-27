@@ -1,7 +1,10 @@
 <!--品牌详情-->
 <template>
   <div class="brand-detail">
-    <img src="../images/dynamic/01/01.png">
+    <div class="banner">
+      <img src="../images/brand/banner.png">
+      <img class="img_title" src="../images/brand/banner_title.png">
+    </div>
     <ul>
       <li @click="tabClick(1)" :class="{'active':tabIndex==1}">植根县域</li>
       <li @click="tabClick(2)" :class="{'active':tabIndex==2}">车多价好</li>
@@ -73,6 +76,16 @@ export default {
 <style scoped>
   .brand-detail{
     margin-bottom: 50px;
+  }
+  .brand-detail .banner{
+    position: relative;
+  }
+  .brand-detail .banner .img_title{
+    position: absolute;
+    right: 25px;
+    bottom: 11px;
+    width: 85px;
+    height: 138px;
   }
   .brand-detail img{
     width: 100%;
