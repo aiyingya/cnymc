@@ -36,7 +36,7 @@ export default {
       dyIndex: 1
     }
   },
-  created: function () {
+  activated: function () {
     const _this = this
     const _index = _this.$route.query.stage
     if (_index) {
@@ -45,9 +45,9 @@ export default {
       } catch (e) {
         _this.dyIndex = 1
       }
-      return
+    } else {
+      _this.dyIndex = 1
     }
-    _this.dyIndex = 1
   }
 }
 </script>

@@ -50,7 +50,7 @@ export default {
       _this.tabIndex = index
     }
   },
-  created: function () {
+  activated: function () {
     const _this = this
     const _index = _this.$route.query.index
     if (_index) {
