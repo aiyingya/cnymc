@@ -65,6 +65,7 @@ export default {
   },
   watch: {
     '$route' (to, from) {
+      //  注意这里用的是 'fullPath' 参数也存在storage里面哦~~~~
       if (to.name === 'Main') {
         window.localStorage.removeItem('routers')
         this.$store.commit('setTransition', 'next')
@@ -73,12 +74,12 @@ export default {
         let routersArr = (sessionStorage.getItem('routers') && sessionStorage.getItem('routers').split(',')) || []
         let len = routersArr.length
         if (len === 0) {
-          routersArr.push(from.path)
-          routersArr.push(to.path)
+          routersArr.push(from.fullPath)
+          routersArr.push(to.fullPath)
         } else {
-          if (to.path !== routersArr[routersArr.length - 2] || this.$store.state.isSkip) {
+          if (to.fullPath !== routersArr[routersArr.length - 2] || this.$store.state.isSkip) {
             this.$store.commit('setTransition', 'next')
-            routersArr.push(to.path)
+            routersArr.push(to.fullPath)
           } else {
             this.$store.commit('setTransition', 'prev')
             routersArr.splice(len - 1)
