@@ -38,14 +38,13 @@ export default {
   },
   created: function () {
     const _this = this
-    const _index = _this.$route.query.index
+    const _index = _this.$route.query.stage
     if (_index) {
       try {
         _this.dyIndex = Number(_index)
       } catch (e) {
         _this.dyIndex = 1
       }
-      console.log(_this.dyIndex)
       return
     }
     _this.dyIndex = 1

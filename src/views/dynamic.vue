@@ -5,14 +5,13 @@
       <img src="../images/dynamic/banner.png">
       <img class="img_title" src="../images/dynamic/banner_title.png">
     </div>
-    <div v-for="item in dynamicList" :key="item.index" class="dynamic_item">
+    <div v-for="item in dynamicList" :key="item.index" class="dynamic_item" @click="goDynamicDetail(item.index)">
       <div class="dynamic_detial">
         <h4>{{item.title}}</h4>
         <div>{{item.time}}</div>
       </div>
       <img :src="item.imgSrc">
     </div>
-
   </div>
 </template>
 
@@ -58,6 +57,11 @@ export default {
         imgSrc: require('../images/dynamic/07/image001.jpg'),
         index: 7
       }]
+    }
+  },
+  methods: {
+    goDynamicDetail:function (_index) {
+      this.$router.push({name: 'DynamicDetail',query: {stage: _index}})
     }
   }
 }
