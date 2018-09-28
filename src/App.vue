@@ -178,7 +178,7 @@ export default {
   float: left;
 }
 .other{
-  margin-top: 21px;
+  margin-top: 0;
   height: 60px;
 }
 .main-icon-dropDown{
@@ -259,5 +259,8 @@ body header{
 }
 .dropDown-list td.active{
     color: #DD0707;
-  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
 </style>
