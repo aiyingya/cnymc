@@ -17,5 +17,8 @@ export default{
   },
   'setTransition': function (state, data) {
     state.transition = data
+  },
+  'setIsSkip': function (state, data) {
+    state.isSkip = Boolean(data)
   }
 }

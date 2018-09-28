@@ -11,7 +11,8 @@ Vue.use(Vuex)
 const state = {
   isShowMenu: false,
   isShowDropDown: false,
-  transition: 'next'
+  transition: 'next',
+  isSkip: false
 }
 
 const store = new Vuex.Store({

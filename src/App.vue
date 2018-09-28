@@ -57,6 +57,7 @@ export default {
         }
         _this.selectDropDown = ''
       }, 200)
+      this.$store.commit('setIsSkip', true)
     }
   },
   watch: {
@@ -67,13 +68,12 @@ export default {
       } else {
         let sessionStorage = window.localStorage
         let routersArr = (sessionStorage.getItem('routers') && sessionStorage.getItem('routers').split(',')) || []
-
         let len = routersArr.length
         if (len === 0) {
           routersArr.push(from.path)
           routersArr.push(to.path)
         } else {
-          if (to.path !== routersArr[routersArr.length - 2]) {
+          if (to.path !== routersArr[routersArr.length - 2] || this.$store.state.isSkip) {
             this.$store.commit('setTransition', 'next')
             routersArr.push(to.path)
           } else {
@@ -83,6 +83,8 @@ export default {
         }
         sessionStorage.setItem('routers', routersArr.join(','))
       }
+      // clear
+      this.$store.commit('setIsSkip', false)
     }
   }
 
