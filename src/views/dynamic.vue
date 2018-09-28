@@ -10,14 +10,14 @@
         <h4>新店开业成交23台，遂川店开业庆典&吉安区团购大联动</h4>
         <div>2018-09-08 11:14:53</div>
       </div>
-      <img src="../images/dynamic/01.png">
+      <img src="../images/dynamic/01/image001.jpg">
     </div>
     <div class="dynamic_item">
       <div class="dynamic_detial">
         <h4>盛夏购车季，运图要买车信丰店团购活动圆满结束！</h4>
         <div>2018-09-03 11:23:02</div>
       </div>
-      <img src="../images/dynamic/01.png">
+      <img src="../images/dynamic/02/image001.jpg">
     </div>
     <div class="dynamic_item">
       <div class="dynamic_detial">
@@ -31,28 +31,28 @@
         <h4>服务无止境，运图要买车“客户满意月”活动圆满结束</h4>
         <div>2018-06-18 11:08:02</div>
       </div>
-      <img src="../images/dynamic/04.png">
+      <img src="../images/dynamic/04/image001.jpg">
     </div>
     <div class="dynamic_item">
       <div class="dynamic_detial">
         <h4>全囯连锁汽车超市，运图要买车强势登陆安福</h4>
         <div>2018-04-01 10:05:08</div>
       </div>
-      <img src="../images/dynamic/05.png">
+      <img src="../images/dynamic/05/image001.jpg">
     </div>
     <div class="dynamic_item">
       <div class="dynamic_detial">
         <h4>热情如火！运图要买车开春团车会圆满结束</h4>
         <div>2018-03-26 11:08:02</div>
       </div>
-      <img src="../images/dynamic/06.png">
+      <img src="../images/dynamic/06/image001.jpg">
     </div>
     <div class="dynamic_item">
       <div class="dynamic_detial">
         <h4>运图要买车全程助力，大余山地马拉松圆满落幕</h4>
         <div>2018-04-23 11:08:02</div>
       </div>
-      <img src="../images/dynamic/07.png">
+      <img src="../images/dynamic/07/image001.jpg">
     </div>
   </div>
 </template>

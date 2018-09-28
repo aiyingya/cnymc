@@ -13,7 +13,7 @@
         遇上了那个对的它<br/>
         将新车开回家<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image001.jpg">
       <p class="text_title_second">——突破底价，拳拳到肉——</p>
       <p class="text_center">
         团购会最重要的是什么？<br/>
@@ -26,7 +26,7 @@
         最热销的车型，最优惠的价格<br/>
         只为留给你<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image002.jpg">
       <p class="text_title_second">——进店6重礼，大奖在等你——</p>
       <p class="text_center">
         除了新车还有什么在等你？<br/>
@@ -39,7 +39,7 @@
         幸运礼：订车用户，抽取美的电风扇、美的空调扇<br/>
         老友礼：订车客户介绍朋友购车，直接赠送666元大红包；<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image003.jpg">
       <p class="text_title_second">——活动不停，诚意满满——</p>
       <p class="text_center">
         再热的天气<br/>
@@ -48,7 +48,7 @@
         每个人都期待着自己的目标爱车<br/>
         能与自己成功牵手<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image004.jpg">
       <p class="text_center">
         现场火热如此<br/>
         怎能少得了惊爆活动呢<br/>
@@ -56,7 +56,7 @@
         现场配备抓钱机一台<br/>
         能抓多少，全凭手气<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image005.jpg">
       <p class="text_center">
         现场还配备了丰富的冷饮甜品<br/>
         供大家免费享用<br/>
@@ -64,7 +64,7 @@
         尽自己所能<br/>
         为所有用户提供最好的活动体验<br/>
       </p>
-      <img src="../../images/dynamic/01/01.png">
+      <img src="../../images/dynamic/02/image006.jpg">
       <p class="text_center">
         所有来到活动现场的人<br/>
         不管有没有订车<br/>
