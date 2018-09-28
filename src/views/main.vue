@@ -51,8 +51,8 @@ export default {
     return {
       bottomText: '版权所有 &#169 2018 运图要买车 沪 ICP 备 15014796号 -1',
       msg: 'Welcome to Your Vue.js App',
-      listImg: [require('../images/brand/01.png'),
-        require('../images/brand/02.png')]
+      listImg: [require('../images/banner_01.png'),
+        require('../images/banner_02.jpg')]
     }
   },
   mounted () {
@@ -86,21 +86,22 @@ export default {
   .swiper-container {
     width: 100%;
     min-height: 100px;
-    .swiper-wrapper {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide {
-      overflow: hidden;
-      background-position: center;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
+
+  }
+  .swiper-container .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-container .swiper-slide {
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
   }
 
   .main_icons{
