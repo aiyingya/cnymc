@@ -15,7 +15,11 @@
       </tbody>
     </table>
     <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent ></div>
-    <router-view/>
+    <transition :name="$store.state.transition">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
@@ -54,11 +58,85 @@ export default {
         _this.selectDropDown = ''
       }, 200)
     }
+  },
+  watch: {
+    '$route' (to, from) {
+      if (to.name === 'Main') {
+        window.localStorage.removeItem('routers')
+        this.$store.commit('setTransition', 'next')
+      } else {
+        let sessionStorage = window.localStorage
+        let routersArr = (sessionStorage.getItem('routers') && sessionStorage.getItem('routers').split(',')) || []
+
+        let len = routersArr.length
+        if (len === 0) {
+          routersArr.push(from.path)
+          routersArr.push(to.path)
+        } else {
+          if (to.path !== routersArr[routersArr.length - 2]) {
+            this.$store.commit('setTransition', 'next')
+            routersArr.push(to.path)
+          } else {
+            this.$store.commit('setTransition', 'prev')
+            routersArr.splice(len - 1)
+          }
+        }
+        sessionStorage.setItem('routers', routersArr.join(','))
+      }
+    }
   }
+
 }
 </script>
 
 <style>
+.transitionRouter-enter-active,
+.transitionRouter-leave-active {
+  transition: all 0.4s;
+}
+
+.transitionRouter-enter,
+.transitionRouter-leave{
+  transform: translate3d(100%, 0, 0);
+}
+
+/*下一页*/
+
+.next-enter-active,.next-leave-active {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.next-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(50%, 0, 0);
+  transform: translate3d(50%, 0, 0);
+}
+
+.next-leave {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/*上一页*/
+
+.prev-enter-active,.prev-leave-active {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.prev-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.prev-leave {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 #app {
   position: relative;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

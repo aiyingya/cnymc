@@ -14,5 +14,8 @@ export default{
   },
   'hideDropDown': function (state) {
     state.isShowDropDown = false
+  },
+  'setTransition': function (state, data) {
+    state.transition = data
   }
 }

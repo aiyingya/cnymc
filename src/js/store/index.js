@@ -10,7 +10,8 @@ import actions from './actions'
 Vue.use(Vuex)
 const state = {
   isShowMenu: false,
-  isShowDropDown: false
+  isShowDropDown: false,
+  transition: 'next'
 }
 
 const store = new Vuex.Store({
