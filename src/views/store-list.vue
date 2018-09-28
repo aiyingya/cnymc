@@ -185,7 +185,9 @@ export default {
     display: -webkit-box;
     -webkit-box-flex: 1;
     -webkit-box-pack: center;
+    /*! autoprefixer: off */
     -webkit-box-orient: vertical;
+    /* autoprefixer: on */
   }
   .store-list_item .info a{
     display: -webkit-inline-box;

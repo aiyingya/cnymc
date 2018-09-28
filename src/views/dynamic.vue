@@ -95,7 +95,9 @@ export default {
   .dynamic_item .dynamic_detial{
     -webkit-box-flex: 1;
     display: -webkit-box;
+    /*! autoprefixer: off */
     -webkit-box-orient: vertical;
+    /* autoprefixer: on */
     text-align: left;
   }
   .dynamic_item .dynamic_detial h4{

@@ -116,7 +116,9 @@ export default {
     -webkit-box-flex: 1;
     -webkit-box-align: center;
     -webkit-box-pack: center;
+    /*! autoprefixer: off */
     -webkit-box-orient: vertical;
+    /* autoprefixer: on */
   }
   .main_icons li>div{
     -webkit-box-align: center;
