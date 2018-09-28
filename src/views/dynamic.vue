@@ -60,8 +60,8 @@ export default {
     }
   },
   methods: {
-    goDynamicDetail:function (_index) {
-      this.$router.push({name: 'DynamicDetail',query: {stage: _index}})
+    goDynamicDetail: function (_index) {
+      this.$router.push({name: 'DynamicDetail', query: {stage: _index}})
     }
   }
 }
