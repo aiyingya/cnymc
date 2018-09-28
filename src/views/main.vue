@@ -46,7 +46,7 @@
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   data () {
     return {
       bottomText: '版权所有 &#169 2018 运图要买车 沪 ICP 备 15014796号 -1',
