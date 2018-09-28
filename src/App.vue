@@ -3,11 +3,11 @@
     <header>
       <div class="row other">
         <img class="main-icon-logo" src="./images/logo_yuntu.png">
-        <img v-show="$store.state.isShowMenu" class="main-icon-dropDown" src="./images/icon_drop_down.png" @click="clickMenuButton">
+        <img v-show="$store.state.isShowMenu" class="main-icon-dropDown" :class="{'main-icon-dropDown_show':$store.state.isShowDropDown}" src="./images/icon_drop_down.png" @click="clickMenuButton">
         <img v-show="!$store.state.isShowMenu" class="main-icon-text" src="./images/text.png">
       </div>
     </header>
-    <table class="dropDown-list dropDown-hide" :class="{'dropDown-show':$store.state.isShowDropDown}" >
+    <table class="dropDown-list dropDown-hide" :class="{'dropDown_show':$store.state.isShowDropDown}" >
       <tbody>
       <tr v-for="item in menu" :key="item.title">
         <td @click="goMenu(item.target)" :class="{'active':item.target == selectDropDown}"><h4>{{item.title}}</h4></td>
@@ -187,6 +187,11 @@ export default {
   right: 16px;
   width: 21px;
   height: 18px;
+  padding: 5px;
+}
+.main-icon-dropDown.main-icon-dropDown_show{
+  box-shadow: -5px -3px 15px -3px rgba(34,34,34,0.3);
+  background-color: white;
 }
 .main-icon-text{
   position: absolute;
@@ -207,19 +212,24 @@ body header{
   .dropDown-list{
     position: absolute;
     top:62px;
-    z-index: 100;
+    z-index: 99;
     padding: 0 13px;
     right: 10px;/*from padding , init is 16px*/
     background-color: #FFFFFF;
-    border-radius: 6px;
+    border-radius: 6px 0 6px 6px;
     /*border:1px solid red;*/
+  }
+  table.dropDown-list{
+    top: 44px;
+    right: 16px;
+    box-shadow: 2px -10px 15px -8px rgba(34,34,34,0.1);
   }
   .dropDown-hide{
     overflow: hidden;
     height: 0;
     display: block;
   }
-.dropDown-show{
+.dropDown_show{
   overflow:auto;
   height: 224px;
   opacity:1;
