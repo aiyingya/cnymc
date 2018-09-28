@@ -14,7 +14,7 @@
       </tr>
       </tbody>
     </table>
-    <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent ></div>
+    <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent @click="close"></div>
     <transition :name="$store.state.transition">
       <keep-alive>
         <router-view></router-view>
@@ -44,6 +44,9 @@ export default {
       } else {
         _this.$store.commit('showDropDown')
       }
+    },
+    close: function () {
+      this.$store.commit('hideDropDown')
     },
     goMenu: function (target) {
       const _this = this
