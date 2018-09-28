@@ -15,7 +15,7 @@
       </tbody>
     </table>
     <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent @click="close"></div>
-    <transition :name="$store.state.transition">
+    <transition :name="$store.state.transition" mode="out-in">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
