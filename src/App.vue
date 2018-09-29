@@ -15,7 +15,9 @@
       </tbody>
     </table>
     <div v-show="$store.state.isShowDropDown" class="overlayer" @touchmove.prevent @click="close"></div>
-    <transition :name="$store.state.transition" mode="out-in">
+    <!--注释动画效果-->
+    <!--<transition :name="$store.state.transition" mode="out-in">-->
+    <transition>
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -60,11 +62,13 @@ export default {
         }
         _this.selectDropDown = ''
       }, 200)
-      this.$store.commit('setIsSkip', true)
+      // 注释动画效果相关代码
+      // this.$store.commit('setIsSkip', true)
     }
   },
   watch: {
     '$route' (to, from) {
+      /* 注释动画效果相关代码
       //  注意这里用的是 'fullPath' 参数也存在storage里面哦~~~~
       if (to.name === 'Main') {
         window.localStorage.removeItem('routers')
@@ -89,6 +93,7 @@ export default {
       }
       // clear
       this.$store.commit('setIsSkip', false)
+      */
     }
   }
 
