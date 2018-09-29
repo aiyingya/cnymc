@@ -11,7 +11,7 @@
     <table class="dropDown-list dropDown-hide" :class="{'dropDown_show':$store.state.isShowDropDown}" >
       <tbody>
       <tr v-for="item in menu" :key="item.title">
-        <td @click="goMenu(item.target)" :class="{'active':item.target == selectDropDown}"><h4>{{item.title}}</h4></td>
+        <td @click="goMenu(item.target)"><h4>{{item.title}}</h4></td>
       </tr>
       </tbody>
     </table>
@@ -35,8 +35,7 @@ export default {
         {title: '关于运图', target: '/AboutYuntu'},
         {title: '品牌介绍', target: '/BrandDetail'},
         {title: '运图动态', target: '/Dynamic'},
-        {title: '门店列表', target: '/StoreList'}],
-      selectDropDown: ''
+        {title: '门店列表', target: '/StoreList'}]
     }
   },
   methods: {
@@ -53,7 +52,6 @@ export default {
     },
     goMenu: function (target) {
       const _this = this
-      _this.selectDropDown = target
       const curPath = _this.$router.app._route.path
       setTimeout(function () {
         if (curPath === target) {
@@ -61,7 +59,6 @@ export default {
         } else {
           _this.$router.push(target)
         }
-        _this.selectDropDown = ''
       }, 200)
       // 注释动画效果相关代码
       // this.$store.commit('setIsSkip', true)
@@ -273,8 +270,8 @@ body header{
   height:100%;
   z-index:10;
 }
-.dropDown-list td.active{
-    color: #DD0707;
+.dropDown-list td:active{
+  color: #DD0707;
 }
 ::-webkit-scrollbar {
   display: none;
