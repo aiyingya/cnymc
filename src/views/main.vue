@@ -23,7 +23,7 @@
       <ul>
         <li><img src="../images/main/text_01.png"></li>
         <li><img src="../images/main/text_02.png"></li>
-        <li>新店开业成交23台，遂川店开业庆典&吉安区团购大联动</li>
+        <router-link :to="{ name: 'DynamicDetail', query: {stage: 1}}" tag="li">新店开业成交23台，遂川店开业庆典&吉安区团购大联动</router-link>
       </ul>
     </div>
     <div class="main_text">
