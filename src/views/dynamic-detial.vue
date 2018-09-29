@@ -55,6 +55,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .dynamic_detial{
+    padding-bottom: 10px;
     border-top:0.5px solid #DDDDDD;
   }
 </style>
