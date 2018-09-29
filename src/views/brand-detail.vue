@@ -95,6 +95,7 @@ export default {
     font-size: 12px;
     line-height: 17px;
     text-align: center;
+    color: #8A8A8A;
   }
 
   .brand-detail ul li.active{
@@ -103,6 +104,7 @@ export default {
     font-size: 12px;
     line-height: 17px;
     text-align: center;
+    color: #DD0707;
   }
   .brand-detail ul li.active:before {
     content: "";
