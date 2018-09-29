@@ -14,7 +14,7 @@
           <div class="text2">{{info.address}}</div>
           <div class="text3">{{info.phone}}</div>
         </div>
-        <a class="a_img" :href="'tel:'+info.phone"><img src="../images/store-list/phone.png"></a>
+        <a v-if="info.phone" class="a_img" :href="'tel:'+info.phone"><img src="../images/store-list/phone.png"></a>
       </div>
     </div>
 
@@ -117,6 +117,13 @@ export default {
           address: '宜春市万载县320国道汽车城',
           phone: '0795-8811816'
         }]
+      }, {
+        city: '上饶',
+        list: [{
+          name: '上饶旗舰店',
+          address: '宜春市樟树市仁和大道华正道物流汽贸园1号',
+          phone: null
+        }]
       }]
     }
   }
@@ -165,13 +172,13 @@ export default {
     line-height: 17px;
     color: #8C8C8C;
   }
-  .store-list_item  .a_img{
+  .store-list_item .a_img{
+    -webkit-box-flex: 1;
     padding: 5px;
   }
   .store-list_item img{
-    -webkit-box-flex: 1;
-    width: 26px;
-    height: 26px;
+    width: 35px;
+    height: 35px;
   }
   .store-list_item .city{
     padding: 9px 0 9px 15px;
