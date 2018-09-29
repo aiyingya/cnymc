@@ -120,8 +120,8 @@ export default {
       }, {
         city: '上饶',
         list: [{
-          name: '上饶旗舰店',
-          address: '宜春市樟树市仁和大道华正道物流汽贸园1号',
+          name: '玉山旗舰店',
+          address: '上饶市玉山县怀玉大道龙庭小区一楼底商',
           phone: null
         }]
       }]
