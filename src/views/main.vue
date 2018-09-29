@@ -82,57 +82,56 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
   .swiper-container {
     width: 100%;
     min-height: 100px;
-
-  }
-  .swiper-container .swiper-wrapper {
-    width: 100%;
-    height: 100%;
-  }
-  .swiper-container .swiper-slide {
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   .main_icons{
     height: 93px;
     background-color: #FFFFFF;
-  }
-  .main_icons ul{
-    display: -webkit-box;
-    height: 100%;
-  }
-  .main_icons li{
-    display: -webkit-box;
-    -webkit-box-flex: 1;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    /*! autoprefixer: off */
-    -webkit-box-orient: vertical;
-    /* autoprefixer: on */
-  }
-  .main_icons li>div{
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    color: #4C4B4B;
-    font-size: 12px;
-  }
-  .main_icons li>div:first-child{
-    margin-bottom: 5px;
-  }
-  .main_icons li>div img{
-    height: 42px;
-    width: 42px;
+    ul{
+      display: -webkit-box;
+      height: 100%;
+    }
+    li{
+      display: -webkit-box;
+      -webkit-box-flex: 1;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      /*! autoprefixer: off */
+      -webkit-box-orient: vertical;
+      /* autoprefixer: on */
+    }
+    li>div{
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      color: #4C4B4B;
+      font-size: 12px;
+    }
+    li>div:first-child{
+      margin-bottom: 5px;
+    }
+    li>div img{
+      height: 42px;
+      width: 42px;
+    }
   }
   .main_dynamic{
     padding-left: 15px;
@@ -140,72 +139,72 @@ export default {
     height: 49px;
     background-color: #FFFFFF;
     border-top:0.5px solid #E8E8E8;
-  }
-  .main_dynamic ul{
-    display: -webkit-box;
-    height: 100%;
-  }
-  .main_dynamic ul li{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
-  }
-  .main_dynamic ul li:nth-child(2){
-    margin-left: 15px;
-  }
-  .main_dynamic ul li:nth-child(3){
-    display: block;
-    -webkit-box-flex: 1;
-    margin-left: 7px;
-    white-space:nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow:ellipsis;
-    width: 100%;
-    height: 49px;
-    line-height: 49px;
-  }
-  .main_dynamic ul li:first-child>img{
-    width: 68px;
-    height: 15px;
-  }
-  .main_dynamic ul li:nth-child(2)>img{
-    width: 29px;
-    height: 17px;
+    ul{
+      display: -webkit-box;
+      height: 100%;
+      li{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+      }
+      li:nth-child(2){
+        margin-left: 15px;
+      }
+      li:nth-child(3){
+        display: block;
+        -webkit-box-flex: 1;
+        margin-left: 7px;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow:ellipsis;
+        width: 100%;
+        height: 49px;
+        line-height: 49px;
+      }
+      li:first-child>img{
+        width: 68px;
+        height: 15px;
+      }
+      li:nth-child(2)>img{
+        width: 29px;
+        height: 17px;
+      }
+    }
   }
   .main_text{
     padding: 13px 15px 11px;
     height: 28px;
     line-height: 28px;
     background-color: #F2F2F2;
-  }
-  .main_text h3{
-    float: left;
-    font-size: 17px;
-  }
-  .main_text span{
-    float: right;
-    font-size: 20px;
-    color: #E8E8E8;
+    h3{
+      float: left;
+      font-size: 17px;
+    }
+    span{
+      float: right;
+      font-size: 20px;
+      color: #E8E8E8;
+    }
   }
   .main_brands{
     padding: 0 15px 11px;
     background-color: #F2F2F2;
-  }
-  .main_brands li{
-    margin: 0;
-    float: left;
-    width: 47%;
-    height:109px;
-    margin-bottom: 9px;
-  }
-  .main_brands img{
-    width: 100%;
-    height: 100%;
-  }
-  .main_brands li:nth-child(2n){
-    float: right;
+    li{
+      margin: 0;
+      float: left;
+      width: 47%;
+      height:109px;
+      margin-bottom: 9px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    li:nth-child(2n){
+      float: right;
+    }
   }
   .main_bottom{
     display: block;
