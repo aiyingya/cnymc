@@ -52,6 +52,7 @@ export default {
   },
   activated: function () {
     const _this = this
+    window.scrollTo(0, 0) // TODO: 不建议写在这里
     const _index = _this.$route.query.index
     if (_index) {
       try {
