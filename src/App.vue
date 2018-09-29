@@ -4,6 +4,7 @@
       <div class="row other">
         <img class="main-icon-logo" src="./images/logo_yuntu.png">
         <img v-show="$store.state.isShowMenu" class="main-icon-dropDown" :class="{'main-icon-dropDown_show':$store.state.isShowDropDown}" src="./images/icon_drop_down.png" @click="clickMenuButton">
+        <div v-show="$store.state.isShowMenu" class="main-icon-dropDown_text">导航</div>
         <img v-show="!$store.state.isShowMenu" class="main-icon-text" src="./images/text.png">
       </div>
     </header>
@@ -197,6 +198,16 @@ export default {
 .main-icon-dropDown.main-icon-dropDown_show{
   box-shadow: -5px -3px 15px -3px rgba(34,34,34,0.3);
   background-color: white;
+}
+.main-icon-dropDown_text{
+  position: absolute;
+  z-index: 98;
+  top: 44px;
+  width: 31px;
+  right: 16px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #515151;
 }
 .main-icon-text{
   position: absolute;
