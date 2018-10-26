@@ -2,7 +2,7 @@
 <template>
   <div class="store-list">
     <div class="banner">
-      <img src="../images/store-list/banner.jpeg">
+      <img src="../images/store-list/banner.jpg">
       <img class="img_title" src="../images/store-list/banner_title.png">
     </div>
     <h4 class="text">运图要买车-全国服务热线：400-928-9099</h4>

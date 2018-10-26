@@ -2,7 +2,7 @@
 <template>
   <div class="brand-detail">
     <div class="banner">
-      <img src="../images/brand/banner.png">
+      <img src="../images/brand/banner.jpg">
       <img class="img_title" src="../images/brand/banner_title.png">
     </div>
     <ul>

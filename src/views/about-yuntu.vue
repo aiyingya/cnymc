@@ -1,7 +1,7 @@
 <template>
   <div class="about-yuntu">
     <div class="banner">
-      <img src="../images/about-yuntu/banner.png">
+      <img src="../images/about-yuntu/banner.jpg">
       <img class="img_title" src="../images/about-yuntu/banner_title.png">
     </div>
     <div class="contain">

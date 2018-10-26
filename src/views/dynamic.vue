@@ -2,7 +2,7 @@
 <template>
   <div class="dynamic">
     <div class="banner">
-      <img src="../images/dynamic/banner.png">
+      <img src="../images/dynamic/banner.jpg">
       <img class="img_title" src="../images/dynamic/banner_title.png">
     </div>
     <div v-for="item in dynamicList" :key="item.index" class="dynamic_item" @click="goDynamicDetail(item.index)">
@@ -34,7 +34,7 @@ export default {
       }, {
         title: '前方高能，运图要买车要搞大事情啦',
         time: '2018-09-03 11:23:02',
-        imgSrc: require('../images/dynamic/03.png'),
+        imgSrc: require('../images/dynamic/03.jpg'),
         index: 3
       }, {
         title: '服务无止境，运图要买车“客户满意月”活动圆满结束',

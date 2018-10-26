@@ -7,7 +7,7 @@
     </p>
     <p>更大维度、更深层次的“全国连锁汽车超市”必将掀开了汽车流通的新篇章，为广大消费者带来新零售时代购车新体验！
     </p>
-    <img src="../../images/brand/05.png">
+    <img src="../../images/brand/05.jpg">
   </div>
 </template>
 
