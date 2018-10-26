@@ -31,8 +31,8 @@ export default {
       storeList: [{
         city: '赣州',
         list: [{
-          name: '章贡旗舰店',
-          address: '赣州市章贡区金潭大道11号',
+          name: '赣州平行进口车店',
+          address: '赣州市经济开发区金潭大道11号',
           phone: '0797-8292666'
         }, {
           name: '会昌旗舰店',
@@ -123,6 +123,10 @@ export default {
           name: '玉山旗舰店',
           address: '上饶市玉山县怀玉大道龙庭小区一楼底商',
           phone: null
+        }, {
+          name: '广丰旗舰店',
+          address: '上饶市广丰区丰溪街道芦洲大道1号华西汽贸楼3号楼',
+          phone: '15270087242'
         }]
       }]
     }
