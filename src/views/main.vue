@@ -4,8 +4,10 @@
     <template>
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="imgUrl in listImg" :key="imgUrl">
-            <img :src="imgUrl">
+          <div class="swiper-slide" v-for="item in listImgs" :key="item.imgUrl">
+            <a :href="item.linkUrl">
+            <img :src="item.imgUrl">
+            </a>
           </div>
         </div>
         <div class="swiper-pagination swiper-pagination-white"></div>
@@ -51,9 +53,9 @@ export default {
     return {
       bottomText: '版权所有 &#169 2018 运图要买车 沪 ICP 备 15014796号 -1',
       msg: 'Welcome to Your Vue.js App',
-      listImg: [require('../images/banner_01.png'),
-        require('../images/banner_02.jpg'),
-        require('../images/banner_03.jpg')]
+      listImgs: [{imgUrl: require('../images/banner_01.png'), linkUrl: 'https://www.chengzijianzhan.com/tetris/page/1615641601184772/'},
+        {imgUrl: require('../images/banner_02.jpg')},
+        {imgUrl: require('../images/banner_03.jpg')}]
     }
   },
   mounted () {
@@ -97,6 +99,11 @@ export default {
       background-size: cover;
       width: 100%;
       height: 100%;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
       img {
         width: 100%;
         height: 100%;
