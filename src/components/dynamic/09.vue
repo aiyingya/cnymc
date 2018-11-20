@@ -86,7 +86,7 @@ export default {
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
         sources: [{
           type: 'video/mp4',
-          src: 'https://yaomaiche-com.oss-cn-beijing.aliyuncs.com/video/%E8%BF%90%E5%9B%BE%E8%A6%81%E4%B9%B0%E8%BD%A6%C2%B7%E5%8D%9C%E5%B9%BF%E9%BD%90%E4%BA%BA%E7%89%A9%E4%B8%93%E8%AE%BF%20%E9%AB%98%E6%B8%85%28480P%29.MP4' // url地址
+          src: 'https://yaomaiche-com.oss-cn-beijing.aliyuncs.com/video/%E3%80%90%E6%96%B0%E9%97%BB%E3%80%91%E6%B1%9F%E8%A5%BF%E4%BA%8C%E5%A5%97%E9%83%BD%E5%B8%82%E7%8E%B0%E5%9C%BA-%E8%BF%90%E5%9B%BE%E8%A6%81%E4%B9%B0%E8%BD%A6%20%E9%AB%98%E6%B8%85%28480P%29.MP4' // url地址
         }],
         poster: require('../../images/dynamic/09/01.jpg'), // 你的封面地址
         notSupportedMessage: '此视频暂无法播放，请稍后再试', // 允许覆盖Video.js无法播放媒体源时显示的默认信息。
