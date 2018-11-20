@@ -22,6 +22,21 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       dynamicList: [{
+        title: '运图要买车创始人卜广齐：用户体验是企业生存的根本',
+        time: '2018-11-09 11:04:02',
+        imgSrc: require('../images/dynamic/08/01.jpg'),
+        index: 8
+      }, {
+        title: '县乡汽车市场也玩双11？ 运图要买车这次闹到电视上去了',
+        time: '2018-11-09 09:08:30',
+        imgSrc: require('../images/dynamic/09/01.jpg'),
+        index: 9
+      }, {
+        title: '专业铸造品质 运图要买车第二期培训认证实录',
+        time: '2018-11-02 15:06:28',
+        imgSrc: require('../images/dynamic/10/01.jpg'),
+        index: 10
+      }, {
         title: '新店开业成交23台，遂川店开业庆典&吉安区团购大联动',
         time: '2018-09-08 11:14:53',
         imgSrc: require('../images/dynamic/01/image001.jpg'),

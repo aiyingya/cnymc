@@ -8,6 +8,9 @@
     <dynamic05 v-show="dyIndex==5"></dynamic05>
     <dynamic06 v-show="dyIndex==6"></dynamic06>
     <dynamic07 v-show="dyIndex==7"></dynamic07>
+    <dynamic08 v-show="dyIndex==8"></dynamic08>
+    <dynamic09 v-show="dyIndex==9"></dynamic09>
+    <dynamic10 v-show="dyIndex==10"></dynamic10>
   </div>
 </template>
 
@@ -19,6 +22,9 @@ import dynamic04 from '@/components/dynamic/04.vue'
 import dynamic05 from '@/components/dynamic/05.vue'
 import dynamic06 from '@/components/dynamic/06.vue'
 import dynamic07 from '@/components/dynamic/07.vue'
+import dynamic08 from '@/components/dynamic/08.vue'
+import dynamic09 from '@/components/dynamic/09.vue'
+import dynamic10 from '@/components/dynamic/10.vue'
 
 export default {
   name: 'DynamicDetail',
@@ -29,7 +35,10 @@ export default {
     dynamic04: dynamic04,
     dynamic05: dynamic05,
     dynamic06: dynamic06,
-    dynamic07: dynamic07
+    dynamic07: dynamic07,
+    dynamic08: dynamic08,
+    dynamic09: dynamic09,
+    dynamic10: dynamic10
   },
   data () {
     return {

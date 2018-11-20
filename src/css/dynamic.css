@@ -41,6 +41,8 @@
   color: #4C4B4B;
   text-align: center;
 }
+
+
 .dynamic_contain .top10{
   margin-top: 10px;
 }
@@ -69,9 +71,30 @@ p.text_title_fourth{
   font-weight: 600;
   font-size: 16px;
 }
+p.text_title_fifth{
+  color: #9c283f;
+}
+p.text_title_sixth{
+  color: #DD0707;
+}
+p.no_indent{
+  text-indent: 0;
+  text-align: left;
+}
 .solid{
   font-weight: 600;
 }
 .mTop10{
   margin-top: 18px;
+}
+.horizontal_img{
+  display: inline-block;
+}
+.horizontal_img img:first-child{
+  float: left;
+  width: 49.5%;
+}
+.horizontal_img img:last-child{
+  float: right;
+  width: 49.5%;
 }
