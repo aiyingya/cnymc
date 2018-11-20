@@ -30,7 +30,9 @@ module.exports = {
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : config.dev.assetsPublicPath,
+    library: 'VueVideoPlayer',
+    libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
