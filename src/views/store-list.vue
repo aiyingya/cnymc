@@ -103,8 +103,8 @@ export default {
           phone: '0796-8952266'
         }, {
           name: '永丰旗舰店',
-          address: null,
-          phone: null
+          address: '吉安市永丰县永丰迎宾大道物流园4号楼首层 103-104 号商铺',
+          phone: '400-928-9099'
         }]
       }, {
         city: '抚州',
@@ -151,8 +151,8 @@ export default {
           phone: '18979288734'
         }, {
           name: '修水旗舰店',
-          address: null,
-          phone: null
+          address: '九江市修水县良塘鹏创汽车城11栋16-18号',
+          phone: '13333871177'
         }]
       }]
     }
